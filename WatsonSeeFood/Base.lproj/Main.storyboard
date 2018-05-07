@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="85X-zC-Tkx">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,105 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WatsonSeeFood" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hotdogBackground" translatesAutoresizingMaskIntoConstraints="NO" id="NKm-aN-Noc" userLabel="Static Hotdog Image">
+                                <rect key="frame" x="67" y="269" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="Wr2-H4-oCC"/>
+                                    <constraint firstAttribute="width" constant="240" id="lWz-VD-hVc"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="deG-90-wal" userLabel="User Chosen Image">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hxD-UV-665">
+                                <rect key="frame" x="0.0" y="64" width="375" height="83"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="83" id="Lvn-Zp-0ws"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ibh-dg-Mjg">
+                                <rect key="frame" x="127.5" y="589" width="120" height="54"/>
+                                <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="vUy-DI-mKk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                                <state key="normal" title="Share">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="shareTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="giZ-kt-jkP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.83529411764705885" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="NKm-aN-Noc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0Bd-OA-XoC"/>
+                            <constraint firstItem="hxD-UV-665" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="65Q-ym-NOZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="deG-90-wal" secondAttribute="trailing" id="FR6-Ef-Nl1"/>
+                            <constraint firstItem="hxD-UV-665" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="FhN-vh-Whs"/>
+                            <constraint firstItem="deG-90-wal" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="I8P-XN-cog"/>
+                            <constraint firstItem="Ibh-dg-Mjg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Rc5-S0-vq0"/>
+                            <constraint firstItem="deG-90-wal" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Uuc-8G-9Wu"/>
+                            <constraint firstAttribute="bottom" secondItem="deG-90-wal" secondAttribute="bottom" id="ZYD-I1-ZDG"/>
+                            <constraint firstItem="NKm-aN-Noc" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="fXc-qL-zxK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hxD-UV-665" secondAttribute="trailing" id="rit-0t-lOa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ibh-dg-Mjg" secondAttribute="bottom" constant="24" id="tH5-qu-Rrh"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="LGh-sz-ink">
+                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="zfU-cm-ddJ">
+                            <connections>
+                                <action selector="cameraTapped:" destination="BYZ-38-t0r" id="gwY-g6-Lrf"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="cameraButton" destination="zfU-cm-ddJ" id="Msg-3s-JQy"/>
+                        <outlet property="imageView" destination="deG-90-wal" id="CDi-ar-2gV"/>
+                        <outlet property="shareButton" destination="Ibh-dg-Mjg" id="fgK-5Z-f8R"/>
+                        <outlet property="topBarImageView" destination="hxD-UV-665" id="nCh-pj-N5K"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="992.79999999999995" y="-564.46776611694156"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="zqA-zZ-7Sr">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="85X-zC-Tkx" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="drf-XC-G2R">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                            <color key="textColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="aaa-UG-pGh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PeU-RL-k8Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="133.59999999999999" y="-564.46776611694156"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="hotdogBackground" width="191" height="143"/>
+    </resources>
 </document>

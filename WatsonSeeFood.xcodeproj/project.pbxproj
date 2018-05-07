@@ -12,7 +12,26 @@
 		0AC0C5AE209CF98C00FECE77 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AC0C5AC209CF98C00FECE77 /* Main.storyboard */; };
 		0AC0C5B0209CF98D00FECE77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AC0C5AF209CF98D00FECE77 /* Assets.xcassets */; };
 		0AC0C5B3209CF98D00FECE77 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AC0C5B1209CF98D00FECE77 /* LaunchScreen.storyboard */; };
+		0AC0C5BC209CFB6400FECE77 /* VisualRecognitionV3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AC0C5BA209CFB6400FECE77 /* VisualRecognitionV3.framework */; };
+		0AC0C5BD209CFB6400FECE77 /* VisualRecognitionV3.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0AC0C5BA209CFB6400FECE77 /* VisualRecognitionV3.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0AC0C5BE209CFB6400FECE77 /* SVProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AC0C5BB209CFB6400FECE77 /* SVProgressHUD.framework */; };
+		0AC0C5BF209CFB6400FECE77 /* SVProgressHUD.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0AC0C5BB209CFB6400FECE77 /* SVProgressHUD.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0AC0C5C0209CFB6400FECE77 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				0AC0C5BF209CFB6400FECE77 /* SVProgressHUD.framework in Embed Frameworks */,
+				0AC0C5BD209CFB6400FECE77 /* VisualRecognitionV3.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0AC0C5A5209CF98C00FECE77 /* WatsonSeeFood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatsonSeeFood.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -22,6 +41,8 @@
 		0AC0C5AF209CF98D00FECE77 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0AC0C5B2209CF98D00FECE77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0AC0C5B4209CF98D00FECE77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0AC0C5BA209CFB6400FECE77 /* VisualRecognitionV3.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = VisualRecognitionV3.framework; sourceTree = "<group>"; };
+		0AC0C5BB209CFB6400FECE77 /* SVProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SVProgressHUD.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +50,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AC0C5BE209CFB6400FECE77 /* SVProgressHUD.framework in Frameworks */,
+				0AC0C5BC209CFB6400FECE77 /* VisualRecognitionV3.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +61,8 @@
 		0AC0C59C209CF98C00FECE77 = {
 			isa = PBXGroup;
 			children = (
+				0AC0C5BB209CFB6400FECE77 /* SVProgressHUD.framework */,
+				0AC0C5BA209CFB6400FECE77 /* VisualRecognitionV3.framework */,
 				0AC0C5A7209CF98C00FECE77 /* WatsonSeeFood */,
 				0AC0C5A6209CF98C00FECE77 /* Products */,
 			);
@@ -74,6 +99,7 @@
 				0AC0C5A1209CF98C00FECE77 /* Sources */,
 				0AC0C5A2209CF98C00FECE77 /* Frameworks */,
 				0AC0C5A3209CF98C00FECE77 /* Resources */,
+				0AC0C5C0209CFB6400FECE77 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -282,6 +308,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X575K5DKDQ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = WatsonSeeFood/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -300,6 +330,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X575K5DKDQ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = WatsonSeeFood/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
